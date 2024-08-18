@@ -6,7 +6,7 @@
 /*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 10:27:11 by mhermini          #+#    #+#             */
-/*   Updated: 2024/08/18 10:13:52 by jarao-de         ###   ########.fr       */
+/*   Updated: 2024/08/18 17:35:46 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	rush(int x, int y)
 	int	col;
 
 	row = 1;
-	while (row <= y)
+	while ((row <= y) && (x > 0) && (y > 0))
 	{
 		col = 1;
 		while (col <= x)
