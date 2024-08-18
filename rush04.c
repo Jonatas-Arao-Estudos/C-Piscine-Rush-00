@@ -3,39 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   rush04.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mhermini <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 10:27:11 by mhermini          #+#    #+#             */
-/*   Updated: 2024/08/17 12:29:42 by nicomart         ###   ########.fr       */
+/*   Updated: 2024/08/18 10:13:52 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
 
 void	rush(int x, int y)
 {
-	int	put_x;
-	int	put_y;
+	int	row;
+	int	col;
 
-	put_x = 1;
-	while (put_y <= y)
+	row = 1;
+	while (row <= y)
 	{
-		put_x = 1;
-		while (put_x <= x)
+		col = 1;
+		while (col <= x)
 		{
-			if (put_x == 1 && put_y == 1
-				|| put_x == x && put_y == y && put_x != 1 && put_y != 1)
-				write (1, "A", 1);
-			else if (put_x == x && put_y == 1
-				|| put_x == 1 && put_y == y)
-				write (1, "C", 1);
-			else if (put_x == 1 || put_x == x || put_y == 1 || put_y == y)
-				write (1, "B", 1);
+			if (((col == 1) && (row == 1)) || ((col == x) && (row == y)
+					&& (col != 1) && (row != 1)))
+				ft_putchar('A');
+			else if (((col == x) && (row == 1))
+				|| ((col == 1) && (row == y)))
+				ft_putchar('C');
+			else if ((col == 1) || (col == x) || (row == 1) || (row == y))
+				ft_putchar('B');
 			else
-				write (1, " ", 1);
-		put_x += 1;
+				ft_putchar(' ');
+			col += 1;
 		}
-		write (1, "\n", 1);
-		put_y += 1;
+		ft_putchar('\n');
+		row += 1;
 	}
 }

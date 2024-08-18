@@ -3,21 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nicomart <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jarao-de <jarao-de@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/17 12:31:29 by nicomart          #+#    #+#             */
-/*   Updated: 2024/08/17 12:36:24 by nicomart         ###   ########.fr       */
+/*   Updated: 2024/08/18 09:40:50 by jarao-de         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+void	ft_putchar(char c);
+
+void	rush(int x, int y);
 
 int	main(void)
 {
 	rush(5, 3);
+	ft_putchar('\n');
 	rush(5, 1);
+	ft_putchar('\n');
 	rush(1, 1);
+	ft_putchar('\n');
 	rush(1, 5);
+	ft_putchar('\n');
 	rush(4, 4);
 	return (0);
 }
